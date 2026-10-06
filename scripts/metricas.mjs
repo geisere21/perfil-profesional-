@@ -4,13 +4,14 @@
  *   node scripts/metricas.mjs            → últimos 28 días
  *   node scripts/metricas.mjs 7          → últimos 7 días
  */
-import { execFileSync } from 'node:child_process';
+import { execSync } from 'node:child_process';
 import { D1_NOMBRE, RAIZ, leerSitio } from './config.mjs';
 
 const dias = Number(process.argv[2] || 28);
 const s = leerSitio();
 const consulta = sql => {
-  const salida = execFileSync('npx', ['wrangler', 'd1', 'execute', D1_NOMBRE, '--remote', '--json', '--command', sql], { cwd: RAIZ, shell: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
+  // La consulta solo usa comillas simples: va entera entre comillas dobles en la línea de comando.
+  const salida = execSync(`npx wrangler d1 execute ${D1_NOMBRE} --remote --json --command "${sql}"`, { cwd: RAIZ, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
   return JSON.parse(salida)[0].results;
 };
 const desde = `datetime('now', '-${dias} days')`;
