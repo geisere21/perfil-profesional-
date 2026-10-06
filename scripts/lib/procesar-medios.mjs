@@ -59,7 +59,7 @@ export function procesarImagen(nombre, { anchos = [480, 800, 1200], foto = false
   return r;
 }
 
-export function procesarVideo(nombre, { crf = 27 } = {}) {
+export function procesarVideo(nombre, { crf = 30 } = {}) {
   const origen = join(MEDIOS, nombre);
   const bruto = readFileSync(origen);
   const clave = `${VERSION}|vid|${nombre}|${sha(bruto)}|${crf}`;

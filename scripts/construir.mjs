@@ -63,8 +63,8 @@ const posters = new Set([s.portada.video.poster, s.fuera.video.poster, ...s.caso
 for (const nombre of mediosUsados(s)) {
   if (nombre.endsWith('.mp4')) {
     const v = procesarVideo(nombre);
-    publicar(v.archivo, dMedios);
-    videos[nombre] = { ...v, url: '/medios/' + v.archivo };
+    publicar(v.archivo, join(DIST, 'video'));   // pasan por functions/video: Pages no responde 206 a los estáticos
+    videos[nombre] = { ...v, url: '/video/' + v.archivo };
     continue;
   }
   const opciones = nombre === s.portada.video.poster ? { anchos: [640, 960, 1280], anchoJpg: 960 }
@@ -265,7 +265,7 @@ writeFileSync(join(DIST, '_headers'), `/*
 /medios/*
   Cache-Control: public, max-age=604800
 `);
-writeFileSync(join(DIST, '_routes.json'), JSON.stringify({ version: 1, include: ['/', '/api/*'], exclude: [] }, null, 2) + '\n');
+writeFileSync(join(DIST, '_routes.json'), JSON.stringify({ version: 1, include: ['/', '/api/*', '/video/*'], exclude: [] }, null, 2) + '\n');
 writeFileSync(join(RAIZ, 'functions', '_enlaces.json'), JSON.stringify({ portada: ENLACES_PORTADA }) + '\n');
 
 // ── 8. Contraste WCAG, calculado y guardado ───────────────────────────────

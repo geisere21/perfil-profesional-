@@ -375,7 +375,7 @@ comprobar('P3', 'Medios solo de la lista cerrada y nada de _to_delete', () => {
   const hashExcluidos = new Set(['46d98390babe5f158b633db5cee6ead45e9765a85c57cc27499245c4c1334db0']);
   const nombresExcluidos = existsSync(excluidosDir) ? readdirSync(excluidosDir).map(n => n.replace(/\.[a-z0-9]+$/i, '')) : [];
   if (existsSync(excluidosDir)) for (const n of readdirSync(excluidosDir)) hashExcluidos.add(sha(readFileSync(join(excluidosDir, n))));
-  const servidos = readdirSync(join(RAIZ, 'medios'));
+  const servidos = [...readdirSync(join(RAIZ, 'medios')), ...(existsSync(join(RAIZ, 'video')) ? readdirSync(join(RAIZ, 'video')) : [])];
   const malos = [];
   for (const f of servidos) {
     const base = f.replace(/-\d+\.(webp|jpg)$/i, '').replace(/\.(mp4)$/i, '');

@@ -17,6 +17,7 @@ import { brotliCompressSync, gzipSync } from 'node:zlib';
 import { DIST, CACHE, RAIZ, PUERTO_LOCAL } from './config.mjs';
 import * as middleware from '../functions/_middleware.js';
 import * as evento from '../functions/api/evento.js';
+import * as video from '../functions/video/[[ruta]].js';
 
 const TIPOS = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
@@ -96,6 +97,7 @@ async function atender(request) {
     const env = { DB };
     return request.method === 'POST' ? evento.onRequestPost({ request, env }) : evento.onRequest({ request, env });
   }
+  if (url.pathname.startsWith('/video/')) return video.onRequest({ request, env: { ASSETS: { fetch: r => estatico(new Request(r.url)) } } });
   if (url.pathname.endsWith('/')) {
     return middleware.onRequest({ request, env: { ASSETS: { fetch: u => estatico(new Request(u)) } }, next: () => estatico(request) });
   }
