@@ -166,7 +166,7 @@ export function pagina(s, r) {
           ${botonWa(s, { texto: s.portada.boton_principal, clase: 'boton boton--principal', boton: 'portada' })}
           <a class="boton boton--secundario" href="#casos" data-evento="ver_casos">${esc(s.portada.boton_secundario)}</a>
         </div>
-        <p class="portada__chips"><span class="chip chip--fisico">${esc(s.portada.chip_fisico)}</span> <span class="chip chip--digital">${esc(s.portada.chip_digital)}</span></p>
+        <p class="portada__chips" data-md="omitir"><span class="chip chip--fisico">${esc(s.portada.chip_fisico)}</span> <span class="chip chip--digital">${esc(s.portada.chip_digital)}</span></p>
       </div>
     </div>
   </div>

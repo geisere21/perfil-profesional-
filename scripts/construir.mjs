@@ -174,7 +174,7 @@ writeFileSync(join(DIST, '404.html'), pagina404(s, recursos));
 // ── 7. Markdown y archivos para agentes ───────────────────────────────────
 const md = htmlAMarkdown(html, URL_SITIO);
 writeFileSync(join(DIST, 'index.md'), md);
-writeFileSync(join(DIST, 'llms-full.txt'), `# ${p.nombre} · contenido completo\n\n> ${p.frase_identidad}\n\nGenerado desde el HTML publicado el ${new Date().toISOString().slice(0, 10)}. Una sección por página del sitio.\n\n---\n\nURL: ${URL_SITIO}\n\n${md}`);
+writeFileSync(join(DIST, 'llms-full.txt'), `# ${p.nombre} · contenido completo\n\n> ${p.frase_identidad}\n\nGenerado el ${new Date().toISOString().slice(0, 10)} desde el HTML publicado. El sitio tiene una sola página; aquí va entera.\n\n---\n\nURL: ${URL_SITIO}\n\n${md}`);
 
 const lineaCaso = c => `- [${c.nombre}](${URL_SITIO}#${c.slug}): ${c.cliente ? `${c.cliente}. ` : ''}${c.que_era} ${c.cifras.map(x => [x.prefijo, x.valor, x.denominador ? `de ${x.denominador}` : '', x.unidad, x.etiqueta].filter(Boolean).join(' ')).join('; ')}.${c.lo_que_no_funciono ? ` ${s.etiqueta_no_funciono}: ${c.lo_que_no_funciono}` : ''}`;
 const llms = `# ${p.nombre}
