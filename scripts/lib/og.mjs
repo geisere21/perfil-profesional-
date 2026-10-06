@@ -15,29 +15,29 @@ mkdirSync(DIR, { recursive: true });
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const dataUri = (ruta, tipo) => `data:${tipo};base64,${readFileSync(ruta).toString('base64')}`;
 
-function htmlOg(s, fuentes, poster) {
+function htmlOg(s, fuentes, foto) {
+  // Foto real a la izquierda (el lanzamiento de Push Roll) y el nombre grande a la derecha:
+  // en el tamaño chico de WhatsApp se lee el nombre y se ve una persona, no una textura oscura.
   const [nombre1, ...resto] = s.persona.nombre.split(' ');
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:Anton;src:url(${fuentes.anton})}
 @font-face{font-family:Inter;font-weight:600;src:url(${fuentes.inter600})}
 *{margin:0;box-sizing:border-box}
 html,body{width:1200px;height:630px;background:#0A0A0A;overflow:hidden}
-.escena{position:relative;width:1200px;height:630px;isolation:isolate}
-.medio{position:absolute;inset:0;background:url(${poster}) 50% 42%/cover}
-.velo{position:absolute;inset:0;background:rgba(244,244,242,.26)}
-.mascara{position:absolute;inset:0;background:#0A0A0A;mix-blend-mode:multiply;display:flex;justify-content:center;padding-top:58px}
-h1{font:400 212px/.84 Anton;color:#fff;text-transform:uppercase;text-align:center;letter-spacing:.002em}
+.foto{position:absolute;left:0;top:0;width:500px;height:630px;background:url(${foto}) 50% 17%/cover;filter:saturate(1.06) contrast(1.04)}
+.foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,0) 70%,#0A0A0A 100%)}
+.texto{position:absolute;left:548px;right:56px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center}
+h1{font:400 178px/.84 Anton;color:#F4F4F2;text-transform:uppercase;letter-spacing:.002em}
 h1 span{display:block}
-.pie{position:absolute;left:0;right:0;top:438px;text-align:center;z-index:2}
-.frase{font:600 38px/1.1 Inter;color:#F4F4F2;letter-spacing:-.01em}
-.chips{margin-top:22px;display:flex;gap:12px;justify-content:center}
-.chip{font:600 17px/1 Inter;letter-spacing:.08em;text-transform:uppercase;color:#0A0A0A;padding:11px 16px;border-radius:99px}
-</style></head><body><div class="escena">
-<div class="medio"></div><div class="velo"></div>
-<div class="mascara"><h1><span>${esc(nombre1)}</span><span>${esc(resto.join(' '))}</span></h1></div>
-<div class="pie"><p class="frase">${esc(s.persona.frase_identidad)}</p>
+.frase{font:600 34px/1.15 Inter;color:#F4F4F2;letter-spacing:-.01em;margin-top:26px}
+.chips{margin-top:22px;display:flex;gap:10px}
+.chip{font:600 16px/1 Inter;letter-spacing:.08em;text-transform:uppercase;color:#0A0A0A;padding:10px 14px;border-radius:99px}
+</style></head><body>
+<div class="foto"></div>
+<div class="texto"><h1><span>${esc(nombre1)}</span><span>${esc(resto.join(' '))}</span></h1>
+<p class="frase">${esc(s.persona.frase_identidad)}</p>
 <div class="chips"><span class="chip" style="background:#F0372B">${esc(s.portada.chip_fisico)}</span><span class="chip" style="background:#D7FF2B">${esc(s.portada.chip_digital)}</span></div></div>
-</div></body></html>`;
+</body></html>`;
 }
 
 function htmlIcono(s, fuentes, lado) {
@@ -50,12 +50,12 @@ i{position:absolute;left:22%;right:22%;bottom:17%;height:${Math.round(lado * 0.0
 </style></head><body><div>${esc(iniciales)}<i></i></div></body></html>`;
 }
 
-export async function generarOgEIconos(s, { rutaAnton, rutaInter600, rutaPoster, distDir }) {
+export async function generarOgEIconos(s, { rutaAnton, rutaInter600, rutaFoto, distDir }) {
   const fuentes = { anton: dataUri(rutaAnton, 'font/woff2'), inter600: dataUri(rutaInter600, 'font/woff2') };
-  const poster = dataUri(rutaPoster, 'image/jpeg');
-  const og = htmlOg(s, fuentes, poster);
+  const foto = dataUri(rutaFoto, 'image/jpeg');
+  const og = htmlOg(s, fuentes, foto);
   const icono = htmlIcono(s, fuentes, 512);
-  const clave = createHash('sha256').update(og + icono + 'v2').digest('hex').slice(0, 16);
+  const clave = createHash('sha256').update(og + icono + 'v3').digest('hex').slice(0, 16);
   const ogJpg = join(DIR, `og-${clave}.jpg`);
   const iconoPng = join(DIR, `icono-${clave}-512.png`);
 
@@ -80,11 +80,13 @@ export async function generarOgEIconos(s, { rutaAnton, rutaInter600, rutaPoster,
   }
 
   mkdirSync(distDir, { recursive: true });
-  copyFileSync(ogJpg, join(distDir, 'miniatura.jpg'));
+  // El nombre cambia con el contenido: WhatsApp y Facebook guardan la miniatura por URL.
+  const nombreOg = `miniatura-${clave.slice(0, 8)}.jpg`;
+  copyFileSync(ogJpg, join(distDir, nombreOg));
   const ff = args => execFileSync('ffmpeg', ['-v', 'error', '-y', ...args]);
   ff(['-i', iconoPng, '-vf', 'scale=180:180:flags=lanczos', join(distDir, 'apple-touch-icon.png')]);
   ff(['-i', iconoPng, '-vf', 'scale=32:32:flags=lanczos', join(distDir, 'icono-32.png')]);
   ff(['-i', iconoPng, '-vf', 'scale=48:48:flags=lanczos', join(distDir, 'favicon.ico')]);
   ff(['-i', iconoPng, '-vf', 'scale=192:192:flags=lanczos', join(distDir, 'icono-192.png')]);
-  return { og: 'miniatura.jpg', bytes: readFileSync(ogJpg).length };
+  return { og: nombreOg, bytes: readFileSync(ogJpg).length };
 }

@@ -111,7 +111,7 @@ writeFileSync(join(DIST, rutaCss), css);
 const og = await generarOgEIconos(s, {
   rutaAnton: join(dFuentes, 'anton-400.woff2'),
   rutaInter600: join(dFuentes, 'inter-600.woff2'),
-  rutaPoster: join(RAIZ, 'medios', s.portada.video.poster),
+  rutaFoto: join(RAIZ, 'medios', 'geiser-push-roll-escenario.jpg'),
   distDir: DIST
 });
 

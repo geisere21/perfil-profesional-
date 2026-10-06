@@ -369,6 +369,31 @@ async function pagina({ ancho = 1440, alto = 900, js = true, quieto = false, sav
   }
   c.detalles.push('Sin scroll horizontal a 360, 768 y 1440 px, revisando toda la página.');
 
+  // El nombre se vuelve a armar al subir, aunque la página recalcule con el scroll abajo
+  // (pasaba en escritorio: el refresco al terminar de cargar tomaba el estado abierto como inicio).
+  const r = await pagina({ ancho: 1440, alto: 900 });
+  await r.p.evaluate(() => window.scrollTo(0, window.innerHeight * 1.4));
+  await espera(900);
+  await r.p.evaluate(() => window.ScrollTrigger && window.ScrollTrigger.refresh());
+  await espera(400);
+  // A un tercio del recorrido de la portada el nombre ya tiene que leerse: escala menor a 1,6 (con power2.in daba 2,7).
+  await r.p.evaluate(() => window.scrollTo(0, Math.round(window.innerHeight * 0.33)));
+  await espera(1400);
+  const aMedias = await r.p.evaluate(() => { const m = getComputedStyle(document.querySelector('.portada__mascara')).transform; return m === 'none' ? 1 : Number((/matrix\(([^,]+)/.exec(m) || [])[1]); });
+  if (aMedias > 1.6) c.fallos.push(`A un tercio del recorrido el nombre sigue explotado: escala ${aMedias.toFixed(1)}`);
+  else c.detalles.push(`Al subir, a un tercio del recorrido de la portada el nombre ya se lee (escala ${aMedias.toFixed(2)}).`);
+  await r.p.evaluate(() => window.scrollTo(0, 0));
+  await espera(1400);
+  const armado = await r.p.evaluate(() => {
+    const m = getComputedStyle(document.querySelector('.portada__mascara'));
+    const t = getComputedStyle(document.querySelector('.portada__texto'));
+    return { transform: m.transform, opacidad: m.opacity, visible: m.visibility, texto: t.opacity };
+  });
+  const escalaArriba = armado.transform === 'none' ? 1 : Number((/matrix\(([^,]+)/.exec(armado.transform) || [])[1]);
+  if (Math.abs(escalaArriba - 1) > 0.02 || armado.opacidad !== '1' || armado.visible !== 'visible' || armado.texto !== '1') c.fallos.push(`Al subir, el nombre no se rearma: ${JSON.stringify(armado)}`);
+  else c.detalles.push('Escritorio: después de bajar, recalcular y volver arriba, el nombre se rearma (escala 1, texto visible).');
+  await r.p.close();
+
   const t = await pagina({ ancho: 1440, alto: 900 });
   const vistos = [];
   let sinAnillo = [];

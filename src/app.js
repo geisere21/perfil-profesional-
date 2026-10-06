@@ -237,10 +237,15 @@
         onRefreshInit: function () { gsap.set(mascara, { scale: 1, transformOrigin: origenMascara() }); }
       }
     });
-    tl.to(texto, { autoAlpha: 0, y: -24, duration: 0.22, ease: 'none' }, 0)
-      .to(mascara, { scale: escala, duration: 0.72, ease: 'power2.in' }, 0.08)
-      .to(velo, { autoAlpha: 0, duration: 0.25, ease: 'none' }, 0.6)
-      .to(mascara, { autoAlpha: 0, duration: 0.12, ease: 'none' }, 0.8);
+    // fromTo con inicio fijo: si ScrollTrigger recalcula con la página ya abajo (al terminar
+    // de cargar, al girar el teléfono), un .to() tomaría ese estado como inicio y el nombre
+    // no se volvería a armar al subir.
+    tl.fromTo(texto, { autoAlpha: 1, y: 0 }, { autoAlpha: 0, y: -24, duration: 0.22, ease: 'none', immediateRender: false }, 0)
+      // expo.in: el nombre aguanta entero la primera mitad y explota al final; al subir se rearma
+      // desde la mitad del recorrido, no solo en los últimos píxeles (con power2.in seguía en pedazos).
+      .fromTo(mascara, { scale: 1 }, { scale: escala, duration: 0.72, ease: 'expo.in', immediateRender: false }, 0.08)
+      .fromTo(velo, { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.25, ease: 'none', immediateRender: false }, 0.6)
+      .fromTo(mascara, { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.12, ease: 'none', immediateRender: false }, 0.8);
   }
 
   function cinta() {

@@ -8,6 +8,15 @@ export const esc = s => String(s ?? '')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
+/** Pinta las palabras de cada frente con su color (sitio.json → colores_frente): «físico» rojo, «digital» lima. */
+function colorear(s, texto) {
+  let html = esc(texto);
+  for (const [palabra, color] of Object.entries(s.colores_frente || {})) {
+    html = html.replace(new RegExp(`(^|[^\p{L}])(${palabra})(?=[^\p{L}]|$)`, 'giu'), (m, antes, p) => `${antes}<span class="${color}">${p}</span>`);
+  }
+  return html;
+}
+
 const waUrl = (numero, texto) => `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 
 /** <picture> con WebP por anchos y JPG de respaldo. */
@@ -85,7 +94,7 @@ export function pagina(s, r) {
   const p = s.persona;
   const wp = s.whatsapp_panel;
   const casosPublicados = s.casos.filter(c => c.publicado);
-  const aptitudesCinta = s.aptitudes.map(a => `<span class="cinta__item">${esc(a.nombre)}</span> <span class="cinta__sep">✱</span>`).join(' ');
+  const aptitudesCinta = s.aptitudes.map(a => `<span class="cinta__item">${colorear(s, a.nombre)}</span> <span class="cinta__sep">✱</span>`).join(' ');
   const destacado = s.digital.titulo_destacado;
   const tituloDigital = destacado && s.digital.titulo.endsWith(destacado)
     ? `${esc(s.digital.titulo.slice(0, -destacado.length))}<span class="lima">${esc(destacado)}</span>`
@@ -105,18 +114,18 @@ export function pagina(s, r) {
 <link rel="alternate" type="text/markdown" href="/index.md">
 <meta name="theme-color" content="#0A0A0A">
 <meta name="color-scheme" content="dark">
-<meta property="og:type" content="profile">
+<meta property="og:type" content="website">
 <meta property="og:locale" content="es_VE">
 <meta property="og:site_name" content="${esc(p.nombre)}">
 <meta property="og:url" content="${s.sitio.url}">
 <meta property="og:title" content="${esc(s.sitio.titulo)}">
 <meta property="og:description" content="${esc(p.descripcion)}">
 <meta property="og:image" content="${r.og.url}">
+<meta property="og:image:secure_url" content="${r.og.url}">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="${esc(r.og.alt)}">
-<meta property="profile:first_name" content="${esc(p.nombre.split(' ')[0])}">
-<meta property="profile:last_name" content="${esc(p.nombre.split(' ').slice(1).join(' '))}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(s.sitio.titulo)}">
 <meta name="twitter:description" content="${esc(p.descripcion)}">
@@ -182,9 +191,9 @@ export function pagina(s, r) {
 <section class="seccion" id="que-hago" aria-labelledby="que-hago-titulo">
   <div class="contenedor">
     <h2 class="titular" id="que-hago-titulo">${esc(s.aptitudes_titulo)}</h2>
-    <p class="seccion__intro">${esc(s.aptitudes_intro)}</p>
+    <p class="seccion__intro">${colorear(s, s.aptitudes_intro)}</p>
     <ol class="aptitudes">
-      ${s.aptitudes.map(a => `<li class="aptitud"><h3 class="aptitud__nombre">${esc(a.nombre)}</h3> <p class="aptitud__linea">${esc(a.linea)}</p></li>`).join('\n      ')}
+      ${s.aptitudes.map(a => `<li class="aptitud"><h3 class="aptitud__nombre">${colorear(s, a.nombre)}</h3> <p class="aptitud__linea">${esc(a.linea)}</p></li>`).join('\n      ')}
     </ol>
   </div>
 </section>

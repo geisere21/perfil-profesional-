@@ -47,6 +47,8 @@
     }
   },
 
+  "colores_frente": { "físico": "rojo", "digital": "lima" },
+
   "aptitudes_titulo": "Lo que hago",
   "aptitudes_intro": "Trabajo en innovación comercial: producto, retail, consumo masivo y digital.",
   "aptitudes": [
@@ -102,7 +104,7 @@
       "lo_que_no_funciono": null,
       "fuente": "APP/OUTPUT/LinkedIn-KODIGO-Allocation (copy-post-martes.txt y láminas)",
       "media": [
-        { "tipo": "imagen", "src": "kodigo-campana.png", "alt": "Foto de campaña de KODIGO: modelo con top naranja y una banda elástica sobre fondo amarillo", "foto": true },
+        { "tipo": "imagen", "src": "kodigo-campana-editorial.png", "alt": "Foto de campaña de KODIGO: collar, hombro y top naranja con una banda elástica sobre fondo amarillo", "foto": true },
         { "tipo": "imagen", "src": "kodigo-muro.png", "alt": "Muro de registro de KODIGO Allocation en el teléfono: «Selección privada», con nombre, WhatsApp y fecha de nacimiento", "foto": false }
       ]
     },

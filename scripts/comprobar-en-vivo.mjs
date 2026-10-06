@@ -66,7 +66,7 @@ await noExiste.arrayBuffer();
 if (noExiste.status !== 404) fallos.push(`Una ruta inexistente responde ${noExiste.status}`);
 const get = await traer(URL_SITIO + 'api/evento');
 if (get.status !== 405) fallos.push(`GET /api/evento responde ${get.status}`);
-const og = await traer(URL_SITIO + 'miniatura.jpg');
+const og = await traer((/<meta property="og:image" content="([^"]+)"/.exec(cuerpo) || [])[1]);
 const ogBytes = (await og.arrayBuffer()).byteLength;
 if (!og.ok || ogBytes > 300 * 1024) fallos.push(`Miniatura: ${og.status}, ${Math.round(ogBytes / 1024)} KB`);
 const robots = await (await traer(URL_SITIO + 'robots.txt')).text();

@@ -52,6 +52,7 @@ strong { font-weight: 600; }
 .salto { position: absolute; left: var(--margen); top: -100px; z-index: 100; background: var(--lima); color: var(--negro); padding: 12px 16px; border-radius: 8px; font-weight: 600; text-decoration: none; }
 .salto:focus { top: 12px; }
 .lima { color: var(--lima); }
+.rojo { color: var(--rojo); }
 
 .contenedor { width: 100%; max-width: var(--ancho); margin-inline: auto; }
 .seccion { padding: clamp(72px, 13vw, 168px) var(--margen); position: relative; }
@@ -238,8 +239,16 @@ strong { font-weight: 600; }
 #cuadre .caso__medio:last-child img { object-fit: contain; }
 #kodigo-allocation .caso__medio:last-child img { object-fit: contain; background: #F4EFE6; }
 @media (min-width: 1024px) {
+  /* KODIGO en escritorio: la foto de campaña (apaisada, sin cara) arriba y el muro abajo. */
+  #kodigo-allocation .caso__medios { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); }
+  #kodigo-allocation .caso__medio:first-child { aspect-ratio: 5 / 3; }
+  #kodigo-allocation .caso__medio:last-child img { object-fit: cover; object-position: 50% 26%; background: #F4EFE6; }
+  /* Fusión es un afiche con texto: entero, centrado sobre negro, nunca recortado. */
+  #fusion .caso__medio img { object-fit: contain; background: var(--negro); }
   .caso { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
-  .caso__medios { grid-template-rows: 1fr; }
+  /* Las imágenes se ajustan al alto de la tarjeta, no al revés: sin esto el muro de KODIGO o la
+     pantalla de Cuadre (fotos verticales) estiraban la columna y la tarjeta las recortaba. */
+  .caso__medios { grid-template-rows: 1fr; height: 0; min-height: 100%; }
   .caso__medios--2 .caso__medio, .caso__medios--1 .caso__medio, #push-roll .caso__medio--video { aspect-ratio: auto; }
   .caso__medios--1 .caso__medio img { object-position: 50% 50%; }
 }
@@ -293,7 +302,7 @@ strong { font-weight: 600; }
 .como__foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 64%; }
 .reglas { counter-reset: regla; }
 .regla { counter-increment: regla; display: grid; grid-template-columns: 2.4em 1fr; gap: 6px 16px; padding: 22px 0; border-top: 1px solid var(--linea); }
-.regla::before { content: counter(regla, decimal-leading-zero); grid-row: span 2; font: 400 22px/1.2 var(--anton); color: var(--gris); }
+.regla::before { content: counter(regla, decimal-leading-zero); grid-row: span 2; font: 400 22px/1.2 var(--anton); color: var(--lima); }
 .regla__texto { font: 600 clamp(20px, 2vw, 26px)/1.25 var(--inter); letter-spacing: -.01em; }
 .regla__apoyo { color: #C9C9C3; }
 @media (min-width: 1024px) {
