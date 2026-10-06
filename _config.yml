@@ -1,0 +1,18 @@
+# GitHub Pages publica la raíz de este repo en la URL vieja
+# (https://geisere21.github.io/perfil-profesional-/).
+# Solo deben salir index.html y 404.html: la redirección a la web nueva.
+# Todo lo demás es código fuente y no se publica ahí.
+exclude:
+  - datos
+  - medios
+  - src
+  - functions
+  - scripts
+  - migrations
+  - dist
+  - node_modules
+  - package.json
+  - package-lock.json
+  - wrangler.toml
+  - contraste.json
+  - LEEME.md
