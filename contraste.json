@@ -1,0 +1,161 @@
+{
+  "formula": "WCAG 2.x, luminancia relativa",
+  "calculado": "2026-10-06",
+  "tokens": {
+    "negro": "#0A0A0A",
+    "negro-2": "#131313",
+    "tarjeta": "#161616",
+    "hueso": "#F4F4F2",
+    "gris": "#96968F",
+    "lima": "#D7FF2B",
+    "rojo": "#F0372B",
+    "texto-suave": "#C9C9C3",
+    "texto-respuesta": "#DADAD5"
+  },
+  "pares": [
+    {
+      "texto": "hueso",
+      "fondo": "negro",
+      "tamano": "normal",
+      "ratio": 17.98,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "hueso",
+      "fondo": "negro-2",
+      "tamano": "normal",
+      "ratio": 16.87,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "hueso",
+      "fondo": "tarjeta",
+      "tamano": "normal",
+      "ratio": 16.43,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "gris",
+      "fondo": "negro",
+      "tamano": "normal",
+      "ratio": 6.65,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "gris",
+      "fondo": "negro-2",
+      "tamano": "normal",
+      "ratio": 6.24,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "gris",
+      "fondo": "tarjeta",
+      "tamano": "normal",
+      "ratio": 6.08,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "texto-suave",
+      "fondo": "negro",
+      "tamano": "normal",
+      "ratio": 11.9,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "texto-suave",
+      "fondo": "negro-2",
+      "tamano": "normal",
+      "ratio": 11.17,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "texto-suave",
+      "fondo": "tarjeta",
+      "tamano": "normal",
+      "ratio": 10.88,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "texto-respuesta",
+      "fondo": "negro",
+      "tamano": "normal",
+      "ratio": 14.11,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "lima",
+      "fondo": "negro",
+      "tamano": "normal",
+      "ratio": 17.19,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "lima",
+      "fondo": "tarjeta",
+      "tamano": "grande",
+      "ratio": 15.71,
+      "minimo": 3,
+      "cumple": true
+    },
+    {
+      "texto": "rojo",
+      "fondo": "negro",
+      "tamano": "normal",
+      "ratio": 4.98,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "rojo",
+      "fondo": "negro-2",
+      "tamano": "grande",
+      "ratio": 4.68,
+      "minimo": 3,
+      "cumple": true
+    },
+    {
+      "texto": "rojo",
+      "fondo": "tarjeta",
+      "tamano": "grande",
+      "ratio": 4.56,
+      "minimo": 3,
+      "cumple": true
+    },
+    {
+      "texto": "negro",
+      "fondo": "lima",
+      "tamano": "normal",
+      "ratio": 17.19,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "negro",
+      "fondo": "rojo",
+      "tamano": "normal",
+      "ratio": 4.98,
+      "minimo": 4.5,
+      "cumple": true
+    },
+    {
+      "texto": "hueso",
+      "fondo": "rojo",
+      "tamano": "grande",
+      "ratio": 3.61,
+      "minimo": 3,
+      "cumple": true
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "sitio": {
+    "url": "https://geiser-elligon.pages.dev/",
+    "idioma": "es",
+    "titulo": "Geiser Elligon · Llevo ideas de punta a punta",
+    "url_anterior": "https://geisere21.github.io/perfil-profesional-/"
+  },
+
+  "persona": {
+    "nombre": "Geiser Elligon",
+    "frase_identidad": "Llevo ideas de punta a punta.",
+    "descripcion": "Geiser Elligon desarrolla productos físicos y digitales para marcas, desde la oportunidad hasta el lanzamiento y el punto de venta. Trabaja desde Caracas, Venezuela.",
+    "ciudad": "Caracas",
+    "pais": "Venezuela",
+    "pais_codigo": "VE",
+    "email": "geiser.elligon@gmail.com",
+    "whatsapp": "584142533279",
+    "whatsapp_visible": "+58 414 253 3279",
+    "instagram_usuario": "@geisere21_",
+    "linkedin_texto": "linkedin.com/in/geiserelligon",
+    "sameAs": [
+      "https://www.instagram.com/geisere21_/",
+      "https://www.linkedin.com/in/geiserelligon/"
+    ],
+    "foto_perfil": "geiser-galeria.jpg"
+  },
+
+  "nav": {
+    "anclas": [
+      { "texto": "Qué hago", "destino": "#que-hago" },
+      { "texto": "Casos", "destino": "#casos" },
+      { "texto": "Servicios", "destino": "#servicios" },
+      { "texto": "Contacto", "destino": "#contacto" }
+    ],
+    "boton_whatsapp": "WhatsApp ↗"
+  },
+
+  "portada": {
+    "boton_principal": "Escríbeme por WhatsApp ↗",
+    "boton_secundario": "Ver casos",
+    "chip_fisico": "Producto físico",
+    "chip_digital": "Producto digital",
+    "video": {
+      "src": "push-roll-produccion-16x9.mp4",
+      "poster": "push-roll-produccion-poster.jpg",
+      "alt": "Producción de Push Roll: Geiser Elligon muestra el tubo junto a una camioneta abierta"
+    }
+  },
+
+  "aptitudes_titulo": "Lo que hago",
+  "aptitudes_intro": "Trabajo en innovación comercial: producto, retail, consumo masivo y digital.",
+  "aptitudes": [
+    { "nombre": "Desarrollo de producto físico y digital", "linea": "Del concepto al anaquel o a la pantalla: formato, empaque, nombre, identidad, app o página." },
+    { "nombre": "BTL digital", "linea": "Activaciones que capturan el contacto de quien participa." },
+    { "nombre": "Lanzamiento de producto", "linea": "Nombre, empaque, plan de exhibición y la operación que lo sostiene." },
+    { "nombre": "Retail media", "linea": "El punto de venta como medio: espacios, exhibición y lo que se mide ahí." },
+    { "nombre": "Dirección de producción", "linea": "Diseñadores, programadores, fabricantes, imprentas, fotógrafos y editores. Defino, reparto, verifico y respondo por el resultado." }
+  ],
+
+  "casos_titulo": "Casos",
+  "casos_intro": "Cuatro proyectos con sus números, incluido el que no llegó a ser negocio.",
+  "etiqueta_que_hice": "Qué hice",
+  "etiqueta_no_funciono": "Lo que no funcionó",
+  "casos": [
+    {
+      "slug": "push-roll",
+      "publicado": true,
+      "nombre": "Push Roll",
+      "cliente": "Con Beijing Asian Cuisine",
+      "frente": "fisico",
+      "que_era": "Formato individual de sushi en tubo para comer en movimiento. Primero de su tipo en el país.",
+      "que_hice": "Desarrollé el formato y el empaque desde que detecté la oportunidad, y armé la operación comercial que lo llevó al anaquel: precios por volumen, fabricantes y cadena de suministro.",
+      "cifras": [
+        { "valor": "4", "denominador": null, "unidad": "meses", "etiqueta": "de la oportunidad al punto de venta", "fuente": "Sobre mi/sobre-mi.md, «Lo que puedo probar»" },
+        { "valor": "30.000", "denominador": null, "unidad": null, "etiqueta": "unidades en el mercado", "fuente": "Sobre mi/sobre-mi.md, «Lo que puedo probar»" },
+        { "prefijo": "más de", "valor": "500.000", "denominador": null, "unidad": null, "etiqueta": "visualizaciones orgánicas la primera semana", "fuente": "Sobre mi/sobre-mi.md, «Lo que puedo probar»" }
+      ],
+      "cita": "Seré el primero en colocar este producto en el mercado venezolano.",
+      "lo_que_no_funciono": null,
+      "fuente": "Sobre mi/sobre-mi.md; APP/Sobre mi/11-CV-BORRADOR.md (qué hice, sin cifras nuevas); carrusel de Instagram, slide 7 (cita)",
+      "media": [
+        { "tipo": "imagen", "src": "geiser-push-roll-escenario.jpg", "alt": "Geiser Elligon en el escenario del lanzamiento, con un Push Roll de Beijing en la mano frente a la pantalla de la marca", "foto": true },
+        { "tipo": "video", "src": "push-roll-produccion-16x9.mp4", "poster": "push-roll-produccion-poster.jpg", "alt": "Clip de producción de Push Roll, sin audio" }
+      ]
+    },
+    {
+      "slug": "kodigo-allocation",
+      "publicado": true,
+      "nombre": "KODIGO Allocation",
+      "cliente": "Para KODIGO",
+      "frente": "digital",
+      "que_era": "Preventa que decidió qué importar para una marca de athleisure de lujo.",
+      "que_hice": "Le cambié el propósito a la preventa: que decidiera qué se importaba. Diseñé la mecánica, construí la página, definí qué medir en cada fase y entregué la lectura con la que se hizo el pedido a fábrica.",
+      "cifras": [
+        { "valor": "2", "denominador": null, "unidad": "días", "etiqueta": "a página publicada", "fuente": "Carrusel de LinkedIn KODIGO Allocation, 14 sep 2026" },
+        { "valor": "27", "denominador": "60", "unidad": null, "etiqueta": "conversaciones frías dejaron sus datos", "fuente": "Carrusel de LinkedIn KODIGO Allocation, lámina 8" },
+        { "valor": "12", "denominador": null, "unidad": "preórdenes", "etiqueta": "de 12 clientas", "fuente": "Carrusel de LinkedIn KODIGO Allocation, lámina 9" },
+        { "valor": "22", "denominador": null, "unidad": "unidades", "etiqueta": "al 50% pagado", "fuente": "Carrusel de LinkedIn KODIGO Allocation, lámina 9" },
+        { "valor": "2", "denominador": null, "unidad": "semanas", "etiqueta": "de la idea al pedido firmado", "fuente": "Carrusel de LinkedIn KODIGO Allocation, lámina 10" }
+      ],
+      "cita": null,
+      "lo_que_no_funciono": null,
+      "fuente": "APP/OUTPUT/LinkedIn-KODIGO-Allocation (copy-post-martes.txt y láminas)",
+      "media": [
+        { "tipo": "imagen", "src": "kodigo-campana.png", "alt": "Foto de campaña de KODIGO: modelo con top naranja y una banda elástica sobre fondo amarillo", "foto": true },
+        { "tipo": "imagen", "src": "kodigo-muro.png", "alt": "Muro de registro de KODIGO Allocation en el teléfono: «Selección privada», con nombre, WhatsApp y fecha de nacimiento", "foto": false }
+      ]
+    },
+    {
+      "slug": "fusion",
+      "publicado": true,
+      "nombre": "Fusión",
+      "cliente": "Para Elements Studio",
+      "frente": "digital",
+      "que_era": "Sistema de registro con cupos para una clase de hot room.",
+      "que_hice": "Lo armé en 5 días: la página de reserva, un backend que asigna cada cupo y lleva la lista de espera, y las piezas para Instagram y WhatsApp.",
+      "cifras": [
+        { "valor": "6", "denominador": null, "unidad": "asistentes", "etiqueta": "la semana anterior, invitados a mano por WhatsApp", "fuente": "Sobre mi/sobre-mi.md (6); Elements/OUTPUT/Fusion - Landing Elements/00-Reporte-Fusion-Elements.md (7 contando al instructor)" },
+        { "valor": "15", "denominador": "15", "unidad": null, "etiqueta": "cupos agotados en menos de 48 horas", "fuente": "Sobre mi/sobre-mi.md; 00-Reporte-Fusion-Elements.md" }
+      ],
+      "nota_cifras": "Con la misma base y el mismo instructor.",
+      "cita": null,
+      "lo_que_no_funciono": null,
+      "fuente": "Elements/OUTPUT/Fusion - Landing Elements/00-Reporte-Fusion-Elements.md (5 días: del 31 de agosto al 4 de septiembre de 2026)",
+      "media": [
+        { "tipo": "imagen", "src": "fusion-clase.jpg", "alt": "Pieza de la clase Fusión: silueta sobre un step con luz naranja y el texto «Elements, sábado 9:20 am, alta intensidad, 45 min»", "foto": false }
+      ]
+    },
+    {
+      "slug": "cuadre",
+      "publicado": true,
+      "nombre": "Cuadre",
+      "cliente": "Producto propio",
+      "frente": "digital",
+      "que_era": "Mi propia app de finanzas personales, construida para probar el método.",
+      "que_hice": "Escribí la especificación, dirigí la construcción con IA, la desplegué y la medí con un panel propio.",
+      "cifras": [
+        { "valor": "3", "denominador": null, "unidad": "semanas", "etiqueta": "de la especificación a usuarios medidos", "fuente": "Sobre mi/sobre-mi.md, «Lo que puedo probar»" },
+        { "valor": "35", "denominador": "45", "unidad": null, "etiqueta": "códigos activados", "fuente": "Panel del piloto (assets/cuadre-panel-kpis.png); 01-CONTEXTO.md" },
+        { "valor": "440", "denominador": null, "unidad": null, "etiqueta": "gastos registrados", "fuente": "Panel del piloto (assets/cuadre-panel-kpis.png); 01-CONTEXTO.md" },
+        { "valor": "246", "denominador": null, "unidad": null, "etiqueta": "pruebas automatizadas", "fuente": "Sobre mi/sobre-mi.md, «Lo que puedo probar»" }
+      ],
+      "cita": null,
+      "lo_que_no_funciono": "No llegó a ser negocio. La cerré el 8 de agosto de 2026: afuera ya había siete apps venezolanas lanzadas en doce meses.",
+      "fuente": "Sobre mi/sobre-mi.md; 01-CONTEXTO.md; 04-SPEC-LANDING.md (lo que no funcionó, texto literal)",
+      "media": [
+        { "tipo": "imagen", "src": "cuadre-panel-kpis.png", "alt": "Panel del piloto de Cuadre con las cifras reales: 35 de 45 códigos activados, 440 gastos registrados y 2 de 31 testers que la seguían abriendo esa semana", "foto": false },
+        { "tipo": "imagen", "src": "cuadre-hoy.png", "alt": "Pantalla «Hoy» de Cuadre: gasto del mes, reparto por categoría y tasas BCV y paralelo, con datos de ejemplo", "foto": false }
+      ]
+    }
+  ],
+
+  "digital": {
+    "titulo": "Ahora también construyo lo digital.",
+    "titulo_destacado": "lo digital.",
+    "texto": "Apps, páginas de preventa y sistemas de registro hechos a la medida de la estrategia de cada marca.",
+    "capas": [
+      { "src": "cuadre-panel-categorias.png", "alt": "Panel de Cuadre: categorías de gasto más registradas por los testers", "rol": "panel" },
+      { "src": "cuadre-hoy.png", "alt": "Pantalla «Hoy» de Cuadre", "rol": "hoy" },
+      { "src": "kodigo-muro.png", "alt": "Muro de registro de KODIGO Allocation", "rol": "muro" },
+      { "src": "kodigo-colecciones.png", "alt": "Las cuatro colecciones de KODIGO en la página de preventa: Sound of Colors, Muse, The Game Together y Splendid Touch", "rol": "coleccion" }
+    ]
+  },
+
+  "como_trabajo": {
+    "titulo": "Cómo trabajo",
+    "foto": { "src": "geiser-galeria.jpg", "alt": "Geiser Elligon de pie frente a una proyección de montañas al atardecer en una galería" },
+    "reglas": [
+      { "regla": "Investigo antes de proponer.", "apoyo": "Parto de comportamientos y fricciones observadas, no de ideas sueltas." },
+      { "regla": "Precio y alcance escritos antes de producir.", "apoyo": "Si es un favor, el favor también lleva alcance y fecha por escrito." },
+      { "regla": "Toda cifra con su denominador.", "apoyo": "Se escribe «27 de 60», no «45%».", "fuente": "KODIGO Allocation: 27 de 60 conversaciones frías" },
+      { "regla": "Un trabajo termina cuando hay una implementación generando resultados y forma de medirlos.", "apoyo": "Por eso cada caso de esta página tiene una cifra medida." }
+    ]
+  },
+
+  "servicios_titulo": "Servicios",
+  "servicios_intro": "Alcance fijo y tiempo de entrega dicho de antemano.",
+  "servicios_encabezados": { "servicio": "Servicio", "entrega": "Entrega" },
+  "servicios_nota": "El precio sigue al alcance y al mercado del proyecto, y se escribe antes de empezar.",
+  "servicios_fuente": "Sobre mi/mi-empresa.md, «Lo que ofrezco al mercado»",
+  "servicios": [
+    { "slug": "llenar-una-fecha", "nombre": "Llenar una fecha (registro con cupos sobre plantilla)", "nombre_corto": "Llenar una fecha", "entrega": "1 día", "pregunta1": "preventa", "fuente": "Sobre mi/mi-empresa.md" },
+    { "slug": "sistema-de-captacion", "nombre": "Sistema de captación a medida (arte, copy y mecánica)", "nombre_corto": "Sistema de captación a medida", "entrega": "1 a 2 días", "pregunta1": "preventa", "fuente": "Sobre mi/mi-empresa.md" },
+    { "slug": "sitio-multipagina", "nombre": "Sitio multipágina con panel editable y AEO", "nombre_corto": "Sitio multipágina con panel editable y AEO", "entrega": "4 a 6 días", "pregunta1": "digital", "fuente": "Sobre mi/mi-empresa.md" },
+    { "slug": "diagnostico", "nombre": "Diagnóstico y arquitectura para proyectos grandes", "nombre_corto": "Diagnóstico y arquitectura", "entrega": "1 a 2 semanas", "pregunta1": "definiendo", "fuente": "Sobre mi/mi-empresa.md" },
+    { "slug": "plataforma-de-datos", "nombre": "Plataforma de identidad y datos", "nombre_corto": "Plataforma de identidad y datos", "entrega": "10 a 12 semanas", "pregunta1": "digital", "fuente": "Sobre mi/mi-empresa.md" },
+    { "slug": "producto-y-formato", "nombre": "Desarrollo de producto y formato comercial", "nombre_corto": "Desarrollo de producto y formato comercial", "entrega": "Según alcance", "pregunta1": "producto", "fuente": "Sobre mi/mi-empresa.md" }
+  ],
+
+  "fuera": {
+    "titulo": "Fuera de la oficina",
+    "cita": "Entrenar es mi simulador de esfuerzo.",
+    "texto": "Lo que aguanto acá después lo uso en el trabajo y en todo lo demás.",
+    "hyrox": "Noviembre de 2026: mi primer HYROX.",
+    "enlace_instagram": "Lo cuento en Instagram ↗",
+    "fuente": "01-CONTEXTO.md, sección 2 (texto y fecha del HYROX)",
+    "video": { "src": "corriendo-4x5.mp4", "poster": "corriendo-poster.jpg", "alt": "Geiser Elligon corriendo por la calle junto a una baranda amarilla" },
+    "foto": { "src": "geiser-ccs-rock-2026.jpg", "alt": "Geiser Elligon con la medalla y el número de corredor del CCS Rock 2026" }
+  },
+
+  "faq_titulo": "Preguntas frecuentes",
+  "faq": [
+    { "pregunta": "¿Qué tipo de proyectos toma Geiser Elligon?", "respuesta": "Lanzamientos de producto físico y digital, preventas, sistemas de registro y de captación, y desarrollo de formato comercial para retail y consumo masivo." },
+    { "pregunta": "¿Trabaja con marcas fuera de Venezuela?", "respuesta": "Sí. El precio se escala distinto para Venezuela y para Estados Unidos." },
+    { "pregunta": "¿Cuánto tarda un proyecto?", "respuesta": "De 1 día para llenar una fecha a 10–12 semanas para una plataforma de datos (ver Servicios).", "enlace": { "texto": "ver Servicios", "destino": "#servicios" }, "fuente": "Sobre mi/mi-empresa.md" },
+    { "pregunta": "¿Cómo se cotiza?", "respuesta": "El precio sigue al alcance y al mercado del proyecto, y se escribe antes de producir. No hay trabajo de prueba gratis: los casos de esta página son la prueba." }
+  ],
+
+  "contacto": {
+    "titulo": "Escríbeme",
+    "texto": "Cuéntame qué quieres poner en marcha y para cuándo.",
+    "etiqueta_correo": "Correo",
+    "etiqueta_instagram": "Instagram",
+    "etiqueta_linkedin": "LinkedIn",
+    "etiqueta_whatsapp": "WhatsApp",
+    "privacidad_titulo": "Privacidad"
+  },
+
+  "whatsapp_panel": {
+    "titulo": "Antes de escribirme",
+    "intro": "Dos preguntas rápidas y te abro WhatsApp con el mensaje listo.",
+    "pregunta1": "1. ¿Qué quieres poner en marcha?",
+    "pregunta2": "2. ¿Para cuándo?",
+    "boton": "Abrir WhatsApp ↗",
+    "directo": "Prefiero escribir directo →",
+    "cerrar": "Cerrar",
+    "mensaje_directo": "Hola Geiser, vengo de tu web.",
+    "mensaje_servicio": "Hola Geiser, me interesa: ",
+    "opciones1": [
+      { "valor": "producto", "texto": "Un producto o un lanzamiento", "mensaje": "Hola Geiser, vengo de tu web. Quiero poner en marcha un producto o un lanzamiento." },
+      { "valor": "preventa", "texto": "Una preventa o un registro con cupos", "mensaje": "Hola Geiser, vengo de tu web. Quiero armar una preventa o un registro con cupos." },
+      { "valor": "digital", "texto": "Una web, una app o un sistema de captación", "mensaje": "Hola Geiser, vengo de tu web. Me interesa una web, una app o un sistema de captación." },
+      { "valor": "definiendo", "texto": "Lo estoy definiendo todavía", "mensaje": "Hola Geiser, vengo de tu web. Tengo una idea que todavía estoy definiendo y quiero conversarla." }
+    ],
+    "opciones2": [
+      { "valor": "este_mes", "texto": "Este mes", "mensaje": "Me gustaría arrancar este mes. Mi marca o negocio es: " },
+      { "valor": "uno_a_tres", "texto": "En uno a tres meses", "mensaje": "Me gustaría arrancar en uno a tres meses. Mi marca o negocio es: " },
+      { "valor": "sin_fecha", "texto": "Sin fecha todavía", "mensaje": "Todavía no tengo fecha. Mi marca o negocio es: " }
+    ]
+  },
+
+  "medicion": {
+    "eventos": {
+      "visita": "cada visita y de dónde llega",
+      "casos_vistos": "si la visita llega a la sección de casos",
+      "ver_casos": "los toques en «Ver casos»",
+      "correo": "los toques en el correo",
+      "whatsapp_panel_abierto": "cuando se abre el panel de WhatsApp y desde qué botón",
+      "whatsapp_enviado": "cuando se abre WhatsApp desde el panel, con las dos respuestas (qué quieres poner en marcha y para cuándo)",
+      "whatsapp_directo": "cuando se abre WhatsApp sin responder las preguntas"
+    },
+    "origenes": {
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "whatsapp": "WhatsApp",
+      "buscador": "un buscador",
+      "asistente_ia": "un asistente de IA",
+      "web_anterior": "mi web anterior",
+      "directo": "directo",
+      "otro": "otro sitio"
+    }
+  },
+
+  "conexiones": {
+    "analitica": null,
+    "seguimiento_clics": "/api/evento"
+  },
+
+  "rutas_preparadas": { "hyrox": false, "casos_largos": false, "en": false },
+
+  "resenas": { "activo": false, "items": [] }
+}

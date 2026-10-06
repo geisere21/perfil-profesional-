@@ -1,0 +1,72 @@
+[
+  {
+    "archivo": "corriendo-4x5.mp4",
+    "sha256_fuente": "9ffe7d95416638e3326590cc9a204ddbd86ef48461fdeecf3c010aa63c510812",
+    "sha256_copia": "22f134de759d855c8833a2a469222466b70670da9e411d0302f95ea7448f42d8"
+  },
+  {
+    "archivo": "corriendo-poster.jpg",
+    "sha256_fuente": "672a3b0e36f9b513852d73cb74b6946dd06a80d3837d4f9f4b7bb7a3b4c4580d",
+    "sha256_copia": "00e0df9d61b3f1f14c9dd35805f8511cab09588a76a10321c60f5734f1216a3b"
+  },
+  {
+    "archivo": "cuadre-hoy.png",
+    "sha256_fuente": "c97f95b3efca971246653a09017718eb7d20128211f6f39ea5f2aee4b8d23c71",
+    "sha256_copia": "c97f95b3efca971246653a09017718eb7d20128211f6f39ea5f2aee4b8d23c71"
+  },
+  {
+    "archivo": "cuadre-panel-categorias.png",
+    "sha256_fuente": "e29b1ac60851b62d7a6eda0b2e49f3992ee6aaf359dd66b46bccd1e3442c4a24",
+    "sha256_copia": "e29b1ac60851b62d7a6eda0b2e49f3992ee6aaf359dd66b46bccd1e3442c4a24"
+  },
+  {
+    "archivo": "cuadre-panel-kpis.png",
+    "sha256_fuente": "5d816eaa70c33f6a7883601b6729188e1bea3ab9a3006dcc103131f05329c3a3",
+    "sha256_copia": "5d816eaa70c33f6a7883601b6729188e1bea3ab9a3006dcc103131f05329c3a3"
+  },
+  {
+    "archivo": "fusion-clase.jpg",
+    "sha256_fuente": "478fb2abea4647b83a5f058a148800dc97206607937b582cac9a65fcb9e3982a",
+    "sha256_copia": "478fb2abea4647b83a5f058a148800dc97206607937b582cac9a65fcb9e3982a"
+  },
+  {
+    "archivo": "geiser-ccs-rock-2026.jpg",
+    "sha256_fuente": "ff455e58f03adc056758d10798cc6b9d14e18753f056d6115ff19ee81d3fded4",
+    "sha256_copia": "28bbd2ba021a18cb15aaf9b0057092c7b2acd8fa2981044eb548e9bb2b00338c"
+  },
+  {
+    "archivo": "geiser-galeria.jpg",
+    "sha256_fuente": "4311a0a13a8eb5a5394f336a13a26d5f353bf6421546b81e1b33f2c82cbb0f6a",
+    "sha256_copia": "66e83c03c3c2e4c8f6d8ead204c6272116da699df25e061715643c98a00ee4b4"
+  },
+  {
+    "archivo": "geiser-push-roll-escenario.jpg",
+    "sha256_fuente": "88909f22d7c754961ce77de4c90471c6a5732a5e8273daea3e97f71a36048840",
+    "sha256_copia": "83863b1a8d3b3c86e93cc7edcd5a9a40ec6d65ee5a6de6f6c0905976e2573240"
+  },
+  {
+    "archivo": "kodigo-campana.png",
+    "sha256_fuente": "d79b1108a1e854726588039e342d65c0fb764001d4a4e99ad853a5378f2f6958",
+    "sha256_copia": "d79b1108a1e854726588039e342d65c0fb764001d4a4e99ad853a5378f2f6958"
+  },
+  {
+    "archivo": "kodigo-colecciones.png",
+    "sha256_fuente": "46265c84a11d33bada8897b7ee8f94a8a95631ca26303b569106a7453829c753",
+    "sha256_copia": "46265c84a11d33bada8897b7ee8f94a8a95631ca26303b569106a7453829c753"
+  },
+  {
+    "archivo": "kodigo-muro.png",
+    "sha256_fuente": "4e9b1c7c7b8f8a88aaa0dcbdf5b9c84e20e34969a2dc03a9d9d7b7fd3d31448c",
+    "sha256_copia": "4e9b1c7c7b8f8a88aaa0dcbdf5b9c84e20e34969a2dc03a9d9d7b7fd3d31448c"
+  },
+  {
+    "archivo": "push-roll-produccion-16x9.mp4",
+    "sha256_fuente": "ffb5d9fe9fddd3ca8b0c63a4075106b49707c2618012b8a19a7d8ca4191f8ffa",
+    "sha256_copia": "8fbd9779627c241dcd1edeaccdf7f1bc1b6f8cf1602edd97430cdc49c0915780"
+  },
+  {
+    "archivo": "push-roll-produccion-poster.jpg",
+    "sha256_fuente": "778efcfc0b368850a88190a042fdaf3bfb64d0a018aadc2c9fc8608ea5a91ddd",
+    "sha256_copia": "84d2c2cc1eae4604ff66d2490e0ee2b0240759721e5032c0145db7f09fb1e4fa"
+  }
+]

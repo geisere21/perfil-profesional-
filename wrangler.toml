@@ -1,0 +1,10 @@
+# Con este archivo presente, manda él: los bindings del dashboard dejan de contar.
+name = "geiser-elligon"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "geiser-elligon-medicion"
+database_id = "68c6a24b-a115-4bf6-ba0e-2e4b05b720e4"
+migrations_dir = "migrations"

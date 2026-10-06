@@ -1,0 +1,26 @@
+{
+  "name": "geiser-elligon-landing",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Landing personal de Geiser Elligon. HTML estático generado desde datos/sitio.json.",
+  "scripts": {
+    "medios": "node scripts/importar-medios.mjs",
+    "construir": "node scripts/construir.mjs",
+    "verificar": "node scripts/construir.mjs && node scripts/verificar-aeo.mjs ./dist",
+    "pruebas": "node scripts/pruebas-navegador.mjs",
+    "servir": "node scripts/servir.mjs",
+    "desplegar": "node scripts/desplegar.mjs",
+    "metricas": "node scripts/metricas.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@fontsource/anton": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/playfair-display": "^5.3.0",
+    "gsap": "^3.15.0",
+    "puppeteer-core": "^25.12.0"
+  }
+}
